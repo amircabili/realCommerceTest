@@ -85,7 +85,7 @@
   max-width: 150px;
   position: relative;
   height: 200px;
-  max-height: 200px;
+  max-height: 195px;
 }
 @media (max-width: 768px) {
   .wrapper .itemWrapper .row .card-img-top {
