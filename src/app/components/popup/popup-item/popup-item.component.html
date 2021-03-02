@@ -1,0 +1,92 @@
+<div class="PopupItemComponent">
+  <div class="modalHeader">
+    <div class="row m-0">
+      <div class="col-sm-1 col-xs-1">
+        <div class="exitButtonWrapper">
+          <button alt=""  class="exitButton pull-left"
+                  (click)="finishFunction()">x
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="modalContent">
+    <div class="itemWrapper"  >
+      <div class="row"  >
+        <div class="col-md-6 col-sm-12 p-2 posterWrapper"  >
+          <img  src="{{item.Poster}}"  (error)="onImgError($event)" [ngClass]="(item.Poster=='N/A')?'error':''"   class="card-img-top">
+        </div>
+
+        <div class="col-md-4 col-sm-12 text-right">
+          <div class="row ">
+            <div class="col-sm-12 col-xs-12"><h2 class="card-title m-0">נא עדכן שם</h2>
+              <mat-form-field [ngClass]="false ? 'error' : ''">
+                <mat-label>  </mat-label>
+                <input matInput
+                       [(ngModel)]="item.Title"
+                       placeholder="{{item.Title}}"
+                       type="text"
+                       maxlength="30"
+                       class="text-right"
+                       alt="{{item.Title}}"
+                       value="">
+                <div class="errorField" *ngIf="false">
+                  <span> נא למלא מידע </span>
+                </div>
+              </mat-form-field>
+
+            </div>
+          </div>
+          <div class="row  ">
+            <div class="col-sm-12 col-xs-12"><h2 class="card-title m-0">נא עדכן שנה</h2>
+              <mat-form-field [ngClass]="false ? 'error' : ''">
+                <mat-label>  </mat-label>
+                <input matInput
+                       [(ngModel)]="item.Year"
+                       placeholder="{{item.Year}}"
+                       type="text"
+                       maxlength="30"
+                       class="text-right"
+                       alt="{{item.Year}}"
+                       value="">
+                <div class="errorField" *ngIf="false">
+                  <span> נא למלא מידע </span>
+                </div>
+              </mat-form-field>
+
+            </div>
+          </div>
+          <div class="row  ">
+            <div class="col-sm-12 col-xs-12"><h2 class="card-title m-0">נא עדכן סוג</h2>
+              <mat-form-field [ngClass]="false ? 'error' : ''">
+                <mat-label>  </mat-label>
+                <input matInput
+                       [(ngModel)]="item.Type"
+                       placeholder="{{item.Type}}"
+                       type="text"
+                       class="text-right"
+                       maxlength="30"
+                       alt="{{item.Type}}"
+                       value="">
+                <div class="errorField" *ngIf="false">
+                  <span> נא למלא מידע </span>
+                </div>
+              </mat-form-field>
+
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-sm-12 col-xs-12">
+               <button class="btn btn-info px-4" (click)="updateItem(item)"> עדכן נתונים</button>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div>

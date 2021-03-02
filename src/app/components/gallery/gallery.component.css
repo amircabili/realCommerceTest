@@ -1,0 +1,62 @@
+.wrapper {
+  min-height: 500px;
+}
+.wrapper .topButtonsWrappr {
+  max-width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .wrapper .topButtonsWrappr {
+    max-width: 100%;
+  }
+}
+.wrapper .topButtonsWrappr button {
+  background: lightblue;
+  border: solid 1px gray;
+  color: #232222;
+}
+.wrapper .itemWrapper .row {
+  padding: 10px;
+  border: solid 1px gray;
+  border-radius: 15px;
+  margin: 10px auto;
+  background: lightblue;
+  max-width: 80%;
+  cursor: pointer;
+}
+.wrapper .itemWrapper .row > .posterWrapper {
+  border: solid 2px gray;
+  padding: 0 !important;
+  margin: 0;
+  background: gray;
+  left: 2%;
+}
+@media (max-width: 768px) {
+  .wrapper .itemWrapper .row > .posterWrapper {
+    max-width: 100%;
+    left: 0%;
+  }
+}
+.wrapper .itemWrapper .row > .posterWrapper img.noImage {
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .wrapper .itemWrapper .row {
+    max-width: 100%;
+    width: 30rem;
+  }
+}
+.wrapper .itemWrapper .row .card-img-top {
+  min-width: 8rem;
+  min-height: 180px;
+}
+.wrapper .itemWrapper .row .bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*# sourceMappingURL=gallery.component.css.map */

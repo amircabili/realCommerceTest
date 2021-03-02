@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <div>
+    <ul>
+      <li class="text-center list-unstyled my-2 "><button (click)="getAllMovies()" class=" btn btn-info px-3 text-center">Movies ({{globalFunctionsService.totalMovies}})</button></li>
+      <li class="text-center list-unstyled my-2 "><button (click)="getAllGames()" class=" btn btn-info px-3 text-center">Games ({{globalFunctionsService.totalGames}})</button></li>
+      <li class="text-center list-unstyled my-2 "><button (click)="getAllSeries()" class=" btn btn-info px-3 text-center">Series ({{globalFunctionsService.totalSeries}})</button></li>
+      <li class="text-center list-unstyled my-2 "><button (click)="this.globalFunctionsService.applyChangeView = !this.globalFunctionsService.applyChangeView" class="btn btn-info px-2 text-center">Change view </button></li>
+    </ul>
+  </div>
+</div>

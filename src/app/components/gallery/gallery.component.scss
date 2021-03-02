@@ -1,0 +1,123 @@
+.wrapper{
+  min-height:500px;
+
+.topButtonsWrappr{
+  max-width: 1300px;
+  margin: 0 auto;
+
+  div{
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    max-width:100%;
+  }
+
+  input{
+    border:solid 1px gray;
+    border-radius: 0;
+
+  }
+
+  button{
+    background: lightblue;
+    border: solid 1px gray;
+    color: #232222;
+  }
+}
+
+  .itemWrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    .row{
+      transition: all 0.5s ease;
+      &.viewChange{
+
+        max-width: 45% !important;
+        float: left;
+        position: relative;
+        margin: 10px 10px;
+        padding: 20px 10px;
+        min-height: 240px;
+
+      }
+
+      &>.posterWrapper{
+        border: solid 2px gray;
+        padding: 0 !important;
+        margin: 0;
+        background: gray;
+        left: 2%;
+        min-width: 7rem;
+        min-height: 180px;
+        max-width: 150px;
+        position: relative;
+        height: 200px;
+        max-height: 200px;
+
+
+        @media (max-width: 768px) {
+          max-width: 100%;
+          left: 0%;
+          min-width: initial;
+          min-height:initial;
+          max-width: initial;
+          position: relative;
+          height: initial;
+          max-height: initial;
+        }
+
+        img{
+          &.noImage{
+            //background: no-repeat center url('../../../media/pics/noPicFound.png');
+            background-size: cover;
+          }
+        }
+
+      }
+      padding: 10px;
+      border: solid 1px gray;
+      border-radius: 15px;
+      margin: 10px auto;
+      background: lightblue;
+      max-width: 80%;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+        width: 30rem;
+      }
+
+      .card-img-top {
+        min-width: 7rem;
+        min-height: 180px;
+        max-width: 150px;
+        position: relative;
+        height: 200px;
+        max-height: 200px;
+        @media (max-width: 768px) {
+          min-width: 7rem;
+          min-height: initial;
+          max-width: initial;
+          position: initial;
+          height: initial;
+          max-height: initial;
+        }
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    }
+
+
+  }
+
+}

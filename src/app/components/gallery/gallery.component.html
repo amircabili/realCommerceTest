@@ -1,0 +1,36 @@
+<div class="wrapper">
+
+  <div class="col-sm-12 col-xs-12 topButtonsWrappr">
+    <div class="d-flex text-white row justify-content-center">
+      <div class="col-md-4 col-sm-12">
+       <div class="p-2 align-self-start"><input  [(ngModel)]="searchInput" matInput [formControl]="globalFunctionsService.itemsFormControl"  class="form-control mr-sm-2 p-2" type="text" placeholder="Search" aria-label="Search"> </div>
+      </div>
+      <div class="col-md-8 col-sm-12">
+        <div class="p-2 float-left"><button (click)="sort()" class="btn btn-info px-3">Sort</button></div>
+        <div class="p-2 float-left"><button (click)="clear()" class="btn btn-info px-3">Clear</button></div>
+        <div class="p-2 float-left"><button (click)="refresh()" class="btn btn-info px-3">Refresh</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="itemWrapper" *ngFor="let item of globalFunctionsService.filteredOptions | async; let indexItem = index" >
+    <div class="row" [ngClass]="globalFunctionsService.applyChangeView ? 'viewChange':'' " (click)="openPopUpItem(item)">
+        <div class="col-md-3 col-sm-12 p-2 posterWrapper" >
+          <img  [src]="item.Poster"  (error)="onImgError($event)" [ngClass]="(item.Poster=='N/A')?'error':''"   class="card-img-top"/>
+        </div>
+
+<!--        <div class="col-md-3 col-sm-12 p-2 posterWrapper"  *ngIf="!item.Poster==='N/A' || item.Poster==='null'">-->
+<!--          <span>11</span>-->
+<!--          <img [src]="noPic" />-->
+<!--        </div>-->
+
+          <div class="col-md-9 col-sm-12">
+            <div class="row mt-2">
+              <div class="col-sm-12 col-xs-12"><h2 class="card-title">{{item.Title}}</h2></div>
+              <div class="col-sm-12 col-xs-12"><p class="card-text"><b>{{LocalDate(item.Year)}}</b></p></div>
+              <div class="col-sm-12 col-xs-12"><p class="card-text">{{item.Type}}</p></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

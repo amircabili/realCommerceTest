@@ -1,0 +1,119 @@
+@import "../../gallery/gallery.component.scss";
+
+
+.itemWrapper{
+  padding: 20px 30px;
+  .posterWrapper{
+    img{
+      width:13rem;
+    }
+  }
+}
+
+
+::ng-deep{
+
+  .cdk-overlay-pane {
+
+    @media (max-width: 768px) {
+      position: absolute;
+      pointer-events: auto;
+      box-sizing: border-box;
+      z-index: 1000;
+      display: flex;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      width: 90% !important;
+    }
+  }
+
+
+  #global-functions-modal-component{
+    overflow: hidden;
+    border-radius: 23px;
+    padding:0;
+
+    app-popup-item {
+      div.PopupItemComponent{
+        position: relative;
+
+        .modalHeader{
+
+          min-height: 64px;
+          color: white;
+          background: #8badb7;
+          padding-right: 30px;
+          width: 100%;
+          margin: 0 auto;
+          float: right;
+
+          .exitButtonWrapper{
+            text-align: center;
+            margin: 0 auto;
+            float: right;
+            top: 9px;
+            position: relative;
+            /* height: 50px; */
+            padding: 10px 16px 10px 20px;
+            left: 20px;
+            border-right: solid 1px rgba(245, 243, 248, 0.6);
+
+            @media (max-width: 768px) {
+              left:50px;
+            }
+
+            .exitButton{
+              //background: no-repeat center url('../../../../media/icons/');
+              width: 34px;
+              height: 29px;
+              top: -2px;
+              float: left;
+              position: relative;
+              /* left: 9px; */
+              display: block;
+              z-index: 99;
+              background: #8badb7;
+              cursor:pointer;
+              font-size: 28px;
+
+              @media (max-width: 1024px) {
+                font-size: 38px;
+              }
+
+
+              span{
+
+              }
+            }
+          }
+          h3{
+            color:#fff;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+          }
+        }
+
+        .modalContent{
+          width: 100%;
+          float: right;
+          left: 50px;
+          height: auto;
+          position: relative;
+
+          @media (max-width: 1024px) {
+            max-width:100%;
+            left:  0px;
+            height: auto;
+            overflow: scroll;
+            max-height: 450px;
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
