@@ -156,21 +156,6 @@ export class GlobalFunctionsService {
     return promise;
   }
 
-  // getGallery() {
-  //   const parm = JSON.parse(JSON.stringify(this.searchParms));
-  //   parm.Title = "Back to the Future"
-  //   const promise = new Promise((resolve, reject) => {
-  //     this.dataManagerService.getGalleryData(parm).then((response) => {
-  //       // @ts-ignore
-  //       this.gallery =  response.results ;
-  //       // this.totalRecords  = this.gallery.length;
-  //     })
-  //       .catch((error) => {
-  //         this.gallery = error;
-  //       });
-  //     });
-  //   return promise;
-  // }
 
   getCouterData() {
     for (const item of this.gallery) {

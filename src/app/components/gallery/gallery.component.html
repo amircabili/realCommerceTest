@@ -18,12 +18,6 @@
         <div class="col-md-3 col-sm-12 p-2 posterWrapper" >
           <img  [src]="item.Poster"  (error)="onImgError($event)" [ngClass]="(item.Poster=='N/A')?'error':''"   class="card-img-top"/>
         </div>
-
-<!--        <div class="col-md-3 col-sm-12 p-2 posterWrapper"  *ngIf="!item.Poster==='N/A' || item.Poster==='null'">-->
-<!--          <span>11</span>-->
-<!--          <img [src]="noPic" />-->
-<!--        </div>-->
-
           <div class="col-md-9 col-sm-12">
             <div class="row mt-2">
               <div class="col-sm-12 col-xs-12"><h2 class="card-title">{{item.Title}}</h2></div>
