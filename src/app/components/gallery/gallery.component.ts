@@ -58,7 +58,7 @@ export class GalleryComponent implements OnInit {
   }
 
   sort() {
-
+    this.globalFunctionsService.getGallery('sort');
   }
 
   LocalDate(date): string {

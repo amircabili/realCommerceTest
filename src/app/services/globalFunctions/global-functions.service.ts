@@ -74,6 +74,11 @@ export class GlobalFunctionsService {
     return this.gallery.filter(item => item.Type.toLowerCase().includes(filterValue));
   }
 
+  public _filterSort(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.gallery.sort((a, b) => a.Title.localeCompare(b.Title));
+  }
+
 
 
 
@@ -117,7 +122,17 @@ export class GlobalFunctionsService {
           this.filteredOptions = this.itemsFormControl.valueChanges
             .pipe(
               startWith(''),
-              map(value => this._filterTypes("series"))
+              map(value => this._filterSort("game"))
+            );
+        }
+
+        if(type === 'sort'){
+          // @ts-ignore
+          this.gallery = response.results;
+          this.filteredOptions = this.itemsFormControl.valueChanges
+            .pipe(
+              startWith(''),
+              map(value => this._filterSort(''))
             );
         }
 
