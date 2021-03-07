@@ -122,7 +122,7 @@ export class GlobalFunctionsService {
           this.filteredOptions = this.itemsFormControl.valueChanges
             .pipe(
               startWith(''),
-              map(value => this._filterSort("game"))
+              map(value => this._filterTypes("series"))
             );
         }
 
